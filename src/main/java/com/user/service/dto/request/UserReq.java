@@ -15,5 +15,5 @@ public class UserReq {
 	
 	private String mobileNumber;
 	
-	private String userRole;
+	private Integer userRole;
 }

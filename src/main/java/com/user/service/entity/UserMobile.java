@@ -16,6 +16,8 @@ public class UserMobile {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer userMobileId;
+	
 	private String mobileNumber;
 	
 	private String otp;

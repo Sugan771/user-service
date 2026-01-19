@@ -9,16 +9,14 @@ public class UserDetailsException extends Exception {
 
 	public UserDetailsException(String errorMsg) {
 		super(errorMsg);
-		error.setErrorMsg(errorMsg);
-		error.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
+		this.error = new ErrorResponse(errorMsg, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	public UserDetailsException(String errorMsg, HttpStatus httpStatus) {
 		super(errorMsg);
-		error.setErrorMsg(errorMsg);
-		error.setHttpStatus(httpStatus);
+		this.error = new ErrorResponse(errorMsg, httpStatus);
 	}
 	
-	private ErrorResponse error;
+	private final ErrorResponse error;
 
 }
